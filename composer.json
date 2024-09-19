@@ -19,7 +19,8 @@
     "psr-4": {
       "Abc\\": "Core/",
       "_Modules\\": "_Modules/",
-      "App\\": "App/"
+      "App\\": "App/",
+       "Abc\\Base\\": "Base/"
     }
   }
 }

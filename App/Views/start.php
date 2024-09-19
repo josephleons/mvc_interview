@@ -35,6 +35,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/employee">Employees</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/departments">Department</a>
+                    </li>
                     <!-- <li class="nav-item">
                         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                     </li>

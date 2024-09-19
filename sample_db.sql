@@ -20,6 +20,9 @@ SET time_zone = "+00:00";
 --
 -- Database: `sample_db`
 --
+DROP DATABASE IF EXISTS `sample_db`;
+CREATE DATABASE `sample_db`;
+USE `sample_db`;
 
 -- --------------------------------------------------------
 
@@ -28,10 +31,11 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `employee` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
   `company` varchar(50) NOT NULL,
-  `date_joined` timestamp NOT NULL DEFAULT current_timestamp()
+  `date_joined` timestamp NOT NULL DEFAULT current_timestamp(),
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -41,10 +45,11 @@ CREATE TABLE `employee` (
 --
 
 CREATE TABLE `user` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(20) NOT NULL,
   `address` varchar(20) NOT NULL,
-  `location` varchar(20) NOT NULL
+  `location` varchar(20) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -53,17 +58,9 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `name`, `address`, `location`) VALUES
 (1, 'Seif Abdallah', 'Shangani', 'Stonetown'),
-(2, 'Raunaq Alkindy', 'Kikwajuni', 'Stonetown'),
+(2, 'Raunaq Alkindy', 'Kikwajuni', 'Stonetown');
 
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`);
+-- --------------------------------------------------------
 
 --
 -- AUTO_INCREMENT for dumped tables
